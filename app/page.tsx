@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, User } from 'lucide-react'; // We use these icons for a pro look
+import { MapPin, Phone, Mail, User } from 'lucide-react'; 
 
 export default function Home() {
   return (
@@ -45,13 +45,14 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* 3. AUDIT SECTION */}
+      {/* 3. AUDIT SECTION (FORM) */}
       <section id="audit" className="py-24 bg-midnight relative border-t border-white/5">
         <div className="max-w-md mx-auto bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-xl">
           <h3 className="text-2xl font-serif text-center mb-2">Test de Maturité IA</h3>
           <p className="text-center text-white/50 text-xs mb-8">Évaluez votre potentiel en 30 secondes</p>
           
           <form name="ai-audit" method="POST" data-netlify="true" className="flex flex-col gap-5">
+            {/* THIS HIDDEN INPUT IS CRITICAL FOR NETLIFY */}
             <input type="hidden" name="form-name" value="ai-audit" />
             
             <div className="flex flex-col gap-2">
@@ -89,7 +90,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Right Column: The General Manager (The "Sage" Card) */}
+          {/* Right Column: The General Manager */}
           <div className="flex flex-col gap-6">
             <h4 className="text-teal-400 text-xs font-bold tracking-[0.2em] uppercase mb-2">Direction Générale</h4>
             
