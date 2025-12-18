@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-</head>
+<html>
+<head></head>
 <body>
-    <form name="ai-audit" data-netlify="true" hidden>
-        <input type="hidden" name="form-name" value="ai-audit" />
-        <select name="q1"></select>
+    <form name="ai-audit" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="q1" />
         <input type="email" name="email" />
+        <input type="hidden" name="form-name" />
     </form>
 </body>
 </html>

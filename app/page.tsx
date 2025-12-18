@@ -51,7 +51,7 @@ export default function Home() {
           <h3 className="text-2xl font-serif text-center mb-2">Test de Maturité IA</h3>
           <p className="text-center text-white/50 text-xs mb-8">Évaluez votre potentiel en 30 secondes</p>
           
-          <form name="ai-audit" method="POST" data-netlify="true" className="flex flex-col gap-5">
+          <form name="ai-audit" method="POST" className="flex flex-col gap-5">
             {/* THIS HIDDEN INPUT IS CRITICAL FOR NETLIFY */}
             <input type="hidden" name="form-name" value="ai-audit" />
             
