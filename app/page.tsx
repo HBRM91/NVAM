@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, User } from 'lucide-react'; 
+import { MapPin, Phone, Mail, User, Building2 } from 'lucide-react'; 
 
 export default function Home() {
   return (
@@ -51,8 +51,9 @@ export default function Home() {
           <h3 className="text-2xl font-serif text-center mb-2">Test de Maturité IA</h3>
           <p className="text-center text-white/50 text-xs mb-8">Évaluez votre potentiel en 30 secondes</p>
           
+          {/* NETLIFY FIX: No 'netlify' or 'data-netlify' attributes here. Just standard HTML. */}
           <form name="ai-audit" method="POST" className="flex flex-col gap-5">
-            {/* THIS HIDDEN INPUT IS CRITICAL FOR NETLIFY */}
+            {/* THIS HIDDEN INPUT IS REQUIRED FOR NETLIFY TO LINK THE FORM */}
             <input type="hidden" name="form-name" value="ai-audit" />
             
             <div className="flex flex-col gap-2">
@@ -90,15 +91,15 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Right Column: The General Manager */}
+          {/* Right Column: New Vision Advisors Morocco */}
           <div className="flex flex-col gap-6">
-            <h4 className="text-teal-400 text-xs font-bold tracking-[0.2em] uppercase mb-2">Direction Générale</h4>
+            <h4 className="text-teal-400 text-xs font-bold tracking-[0.2em] uppercase mb-2">New Vision Advisors Morocco</h4>
             
             <div className="flex items-start gap-4">
               <User className="w-5 h-5 text-gold mt-1" />
               <div>
-                <p className="text-lg font-serif text-white">M. Ahmad DAHBANI</p>
-                <p className="text-white/50 text-sm">General Manager</p>
+                <p className="text-lg font-serif text-white">M. Ahmed DAHBANI</p>
+                <p className="text-white/50 text-sm">Associé Principal</p>
               </div>
             </div>
 
@@ -108,16 +109,16 @@ export default function Home() {
               <div className="flex items-start gap-4 group">
                 <MapPin className="w-5 h-5 text-teal-400 group-hover:text-white transition-colors" />
                 <p className="text-white/70 text-sm leading-relaxed max-w-xs">
-                  Résidence le préféré 2, <br/>
-                  Avenue Abdellatif Benkadour, <br/>
-                  20250, Casablanca, Maroc
+                  Rue Soumaya, Résidence Shehrazade 3 <br/>
+                  ETG 5 N22, Palmiers <br/>
+                  20360, Casablanca
                 </p>
               </div>
 
               <div className="flex items-center gap-4 group">
                 <Phone className="w-5 h-5 text-teal-400 group-hover:text-white transition-colors" />
-                <a href="tel:+212661140450" className="text-white/70 text-sm hover:text-white transition-colors">
-                  +212 661 140 450
+                <a href="tel:+212522223075" className="text-white/70 text-sm hover:text-white transition-colors">
+                  0522 22 30 75
                 </a>
               </div>
 
